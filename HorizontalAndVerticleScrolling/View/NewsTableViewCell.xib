@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" rowHeight="232" id="KGk-i7-Jjw" customClass="NewsTableViewCell" customModule="HorizontalAndVerticleScrolling" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="232"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-iY-bdN">
+                        <rect key="frame" x="0.0" y="0.0" width="354" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmq-2i-ZWm">
+                                <rect key="frame" x="154" y="5" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kmq-2i-ZWm" firstAttribute="top" secondItem="xa3-iY-bdN" secondAttribute="top" constant="5" id="Gw5-2Q-kSo"/>
+                            <constraint firstAttribute="height" constant="32" id="q3K-BY-y0j"/>
+                            <constraint firstItem="kmq-2i-ZWm" firstAttribute="centerX" secondItem="xa3-iY-bdN" secondAttribute="centerX" id="sw7-Zg-RyE"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ko6-5O-oiZ">
+                        <rect key="frame" x="0.0" y="32" width="354" height="200"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="Wnn-6U-ca0"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Sr-qh-H26">
+                            <size key="itemSize" width="300" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ko6-5O-oiZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SF4-b3-PaV"/>
+                    <constraint firstAttribute="trailing" secondItem="Ko6-5O-oiZ" secondAttribute="trailing" id="SYR-eX-ibO"/>
+                    <constraint firstItem="xa3-iY-bdN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wug-Hj-pAe"/>
+                    <constraint firstItem="Ko6-5O-oiZ" firstAttribute="top" secondItem="xa3-iY-bdN" secondAttribute="bottom" id="YF2-96-viL"/>
+                    <constraint firstItem="xa3-iY-bdN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kFM-WM-Kdq"/>
+                    <constraint firstAttribute="trailing" secondItem="xa3-iY-bdN" secondAttribute="trailing" id="nHg-UW-9Z0"/>
+                    <constraint firstAttribute="bottom" secondItem="Ko6-5O-oiZ" secondAttribute="bottom" id="xJ9-Ai-ic6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="Ko6-5O-oiZ" id="X2i-S4-rJl"/>
+                <outlet property="titleLabel" destination="kmq-2i-ZWm" id="HFH-Ue-h9k"/>
+            </connections>
+            <point key="canvasLocation" x="162.31884057971016" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
